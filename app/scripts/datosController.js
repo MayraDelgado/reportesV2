@@ -156,7 +156,7 @@ app.controller('accesoDatosController', ['$scope', '$filter', '$http', '$mdSelec
             var calls = $scope.getCalls(deviceId);
 
             //api call
-            apiNew.multiCall(calls, function (results) {
+            api.multiCall(calls, function (results) {
                 console.log(results);
 
                 var totalEventos = {};
