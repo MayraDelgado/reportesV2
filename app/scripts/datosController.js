@@ -18,8 +18,8 @@ app.controller('accesoDatosController', ['$scope', '$filter', '$http', '$mdSelec
     api.call("Get", {
         "typeName": "Device",
         "search": {
-        "name": "36841-4"
-          
+        "name": "36841-4",
+        "name": "37419-6"            
         }
     }, function (result) {
         $scope.lstDeviceGeotab = result;
