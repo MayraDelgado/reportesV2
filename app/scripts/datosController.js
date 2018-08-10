@@ -16,7 +16,11 @@ app.controller('accesoDatosController', ['$scope', '$filter', '$http', '$mdSelec
         jsonp: true
     });
     api.call("Get", {
-        "typeName": "Device"
+        "typeName": "Device",
+        "search": {
+        "name": "36841-4"
+          
+        }
     }, function (result) {
         $scope.lstDeviceGeotab = result;
         $scope.lstDeviceGeotab.forEach(function (device) {
