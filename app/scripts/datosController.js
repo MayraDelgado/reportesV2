@@ -44,6 +44,7 @@ app.controller('accesoDatosController', ['$scope', '$filter', '$http', '$mdSelec
         start: new Date(),
         end: new Date()
     };
+    $scope.dia = new Date();
     $scope.eventos = [];
     var vehiculos = {};
 
