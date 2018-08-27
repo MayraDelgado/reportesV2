@@ -1,5 +1,5 @@
 var api;
-var app = angular.module('myAplicacion', ['ngMaterial', 'material.components.expansionPanels', 'md.data.table']);
+var app = angular.module('myAplicacion', ['ngMaterial', 'material.components.expansionPanels', 'md.data.table', 'ngMaterialDatePicker']);
 
 app.controller('accesoDatosController', ['$scope', '$filter', '$http', '$mdSelect', '$window', function ($scope, $filter, $http, $mdSelect, $window) {
     var authenticationCallback1;
@@ -18,7 +18,7 @@ app.controller('accesoDatosController', ['$scope', '$filter', '$http', '$mdSelec
     api.call("Get", {
         "typeName": "Device",
         "search": {
-        "name": "29857-7"
+        "name": "10852-4"
         }
     }, function (result) {
         $scope.lstDeviceGeotab = result;
@@ -320,9 +320,11 @@ app.controller('accesoDatosController', ['$scope', '$filter', '$http', '$mdSelec
             console.log("No hay datos que descargar");
         } else
         if ($scope.eventos.length > 0) {
-            $("#fechaDevice").table2excel({
+            /*$("#fechaDevice").table2excel({
                 filename: "AuditoríadeRegistros_Dispositivos"
-            });
+            });*/
+            Exporter.export(fechaDevice, 'AuditoriaRegistros_Dispositivo.xls', 'Descarga');
+                return false;
         }
 
     }
