@@ -30,7 +30,12 @@
   <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script-->
   <script src="../bower_components/jquery-table2excel/src/jquery.table2excel.js"></script>
   <link href="../bower_components/wait-me/src/waitMe.css" rel="stylesheet">
-  <script src="../bower_components/wait-me/src/waitMe.js"></script>
+  <script src="../bower_components/wait-me/src/waitMe.js"></script>  
+  <script src="../bower_components/exporter.js-master/export.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+  <script src="../bower_components/ng-material-datetimepicker/dist/angular-material-datetimepicker.min.js"></script>
+  <script src="../bower_components/ng-material-datetimepicker/dist/angular-material-datetimepicker.min.js.map"></script>
+  <link href="../bower_components/ng-material-datetimepicker/dist/material-datetimepicker.min.css" rel="stylesheet" type="text/css">
   <!--script type="text/javascript" src="/bower_components/js-xlsx/dist/xlsx.core.min.js"></script>
   <script lang="javascript" src="/bower_components/js-xlsx/dist/xlsx.full.min.js"></script-->
   <!--script>
@@ -94,7 +99,7 @@
         <br>
         <br>
         <!--Panel consulta por fechas de instalacion-->
-        <md-expansion-panel md-component-id="panelOne">
+        <md-expansion-panel md-component-id="panelOne" disabled="true">
           <md-expansion-panel-collapsed>
             <div class="md-summary" style="color:rgb(37, 71, 123)">
               <font size="3">CONSULTA POR FECHA</font>
@@ -427,10 +432,11 @@
                         <div class="container">
                           <md-content layout-padding>
                             <div layout-gt-xs="row">
-                              <div flex-gt-xs>
-                                <h4>Del:</h4>
-                                <md-datepicker ng-model="Data.start" md-placeholder="Enter date"></md-datepicker>
-                              </div>
+                              <md-input-container flex-gt-md="50">
+                                  <label>Periodo de consulta</label>
+                                  <input mdc-datetime-picker="" date="true" time="true" minutes="true" seconds="true" type="text" id="datetimesecond" placeholder="Date"
+                                    show-todays-date="" min-date="date" ng-model="Data.start" class=" md-input">
+                                </md-input-container>
                             </div>
                           </md-content>
                         </div>
@@ -439,10 +445,11 @@
                         <div class="container">
                           <md-content layout-padding>
                             <div layout-gt-xs="row">
-                              <div flex-gt-xs>
-                                <h4>Al:</h4>
-                                <md-datepicker ng-model="Data.end" md-placeholder="Enter date"></md-datepicker>
-                              </div>
+                              <md-input-container flex-gt-md="50">
+                                  <label>Periodo de consulta</label>
+                                  <input mdc-datetime-picker="" date="true" time="true" minutes="true" seconds="true" type="text" id="datetimesecondEnd" placeholder="Date"
+                                    show-todays-date="" min-date="date" ng-model="Data.end" class=" md-input">
+                                </md-input-container>
                             </div>
                           </md-content>
                         </div>
