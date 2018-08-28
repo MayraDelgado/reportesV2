@@ -256,9 +256,10 @@ app.controller('accesoDatosController', ['$scope', '$filter', '$http', '$mdSelec
                 $scope.dispositivoSeleccionadoAux.forEach(function (dispositivo) {
                     $scope.consultaDatos(dispositivo.id);
                     swal({
-                        imageUrl: 'https://rawgit.com/MayraDelgado/reportes/master/app/img/lg.ring-loading-gif.gif',
+                        imageUrl: 'https://rawgit.com/MayraDelgado/reportes/master/app/img/cargando5.gif',
                         timer: 8000,
-                        showConfirmButton: false
+                        showConfirmButton: false,
+                        background: 'rgba(100,100,100,0)'
                     });
                 });
 
