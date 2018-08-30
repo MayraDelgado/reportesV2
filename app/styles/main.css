@@ -224,8 +224,7 @@ md-select-menu-container {
     color: #fff;
     padding: 10px;
 }
-
 .dtp table.dtp-picker-days tr>td>a.selected {
     background: #ff4612;
-    /* color: #fff; */
+    color: #fff;
 }
