@@ -217,3 +217,12 @@ md-select-menu-container {
     color: #fff;
     padding: 10px;
 }
+.dtp>.dtp-content>.dtp-date-view>header.dtp-header {
+    background: #ff4612;
+    color: #fff;
+    text-align: center;
+}
+.dtp table.dtp-picker-days tr>td>a.selected {
+    background: #ff4612;
+    color: #fff;
+}
