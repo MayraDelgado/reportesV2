@@ -211,18 +211,21 @@ md-select-menu-container {
 /*md-backdrop.md-select-backdrop {
     z-index: 0;
 }*/
-.dtp div.dtp-date, .dtp div.dtp-time {
-    background: #ff4612;
-    text-align: center;
-    color: #fff;
-    padding: 10px;
-}
 .dtp>.dtp-content>.dtp-date-view>header.dtp-header {
     background: #ff4612;
     color: #fff;
     text-align: center;
 }
+
+.dtp div.dtp-date,
+.dtp div.dtp-time {
+    background: #ff4612;
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+}
+
 .dtp table.dtp-picker-days tr>td>a.selected {
     background: #ff4612;
-    color: #fff;
+    /* color: #fff; */
 }
