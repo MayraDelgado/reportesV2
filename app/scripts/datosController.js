@@ -192,8 +192,8 @@ app.controller('accesoDatosController', ['$scope', '$filter', '$http', '$mdSelec
 
                 var conAjax = $http.post("https://cppa.metricamovil.com/PMFReports/DeviceReport", JSON.stringify({
                     devices: [deviceId],
-                    start: moment($scope.Data.start).format('YYYY-MM-DD') + " 05:00:00",
-                    end: moment($scope.Data.end).add(1, 'd').format('YYYY-MM-DD') + " 05:00:00"
+                    start: moment($scope.Data.start).add('hours', 5).format('YYYY-MM-DD HH:mm:ss'),
+                    end: moment($scope.Data.end).add('hours', 5).format('YYYY-MM-DD HH:mm:ss')
                 })).then(function successCallback(response) {
                     console.log(response);
                     $scope.resultApi = response.data;
@@ -352,8 +352,8 @@ app.controller('accesoDatosController', ['$scope', '$filter', '$http', '$mdSelec
                             "diagnosticSearch": {
                                 "id": id
                             },
-                            "fromDate": moment($scope.Data.start).format('YYYY-MM-DD') + " 05:00:00",
-                            "toDate": moment($scope.Data.end).add(1, 'd').format('YYYY-MM-DD') + " 05:00:00"
+                            "fromDate": moment($scope.Data.start).add('hours', 5).format('YYYY-MM-DD HH:mm:ss'),
+                            "toDate": moment($scope.Data.end).add('hours', 5).format('YYYY-MM-DD HH:mm:ss')
                         }
                     }]);
             });
